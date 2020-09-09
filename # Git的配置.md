@@ -9,18 +9,17 @@
     git remote add origin https://github.com/Ape503/blog.git -----关联远端仓库
     git push -u origin master    -----将更改的本地仓库origin推送到远端仓库
 出错也不要紧，删除重来或者也可能是没有设置SSH密钥也会报错所以要设置ssh密钥。
-![blockchain](img/1.jpg)
 ## SSH密钥的设置
     找到SSH and GPG keys选项设置新的密钥如果没有设置过的请看下面的密钥设置指南将生成的密钥复制进去
     刷新gitHub仓库页面就会看见下图的页面。这就表示gitHub已经配置成功了
-# Git的配置
+# Git配置
 依次填入如下命令
     git config --global user.name "Ape503"   -----指定用户名
     git config --global user.email "3238827607@qq.com"-----指定电子邮件
     git config --global push.default matching-----当git push但未指定任何分支时将自动匹配本地所有分支到远端仓库
     git config --global core.quotepath false -----显示status编码
     git config --global core.editor "vim"    -----设置编辑器为Vim
-# Git的使用
+# Git使用
     本地使用   
     将本地仓库上传到 GitHub
     下载 GitHub 上的仓库
