@@ -8,7 +8,7 @@
     git commit -m "first commit"-----更改记录提交到本地暂存区并以first commit命名
     git remote add origin https://github.com/Ape503/blog.git -----关联远端仓库
     git push -u origin master    -----将更改的本地仓库origin推送到远端仓库
-出错也不要紧，删除重来或者也可能是没有设置SSH密钥也会报错所以要设置ssh密钥。
+出错也不要紧，删除重来或者也可能是因为没有设置SSH密钥也会报错所以要设置ssh密钥。
 ## SSH密钥的设置
     找到SSH and GPG keys选项设置新的密钥如果没有设置过的请看下面的密钥设置指南将生成的密钥复制进去
     刷新gitHub仓库页面就会看见下图的页面。这就表示gitHub已经配置成功了
