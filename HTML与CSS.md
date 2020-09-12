@@ -11,6 +11,7 @@
    
 脱离文档流position属性  绝对定位：父position: relative;子position: absolute;
                        固定定位：position: fixed;相对于窗口的位置
+ before after伪元素可以省去一个div
                        
 # svg 相关
   解决上部与下部距离相等  vertical-algin:top
