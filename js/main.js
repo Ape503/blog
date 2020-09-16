@@ -140,13 +140,3 @@ context.lineTo(x2,y2)      //终点
 context.stroke()
 context.closePath()
 }
-
-canvas.ontouchstart=function(){
-
-}
-canvas.ontouchmove=function(){
-	
-}
-canvas.ontouchend=function(){
-	
-}
