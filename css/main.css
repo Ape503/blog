@@ -1,0 +1,14 @@
+#xxx{
+background: green;
+display: block;
+}
+body{
+margin: 0px;
+}
+html{
+}
+#eraser{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
