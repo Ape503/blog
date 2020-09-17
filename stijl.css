@@ -1,0 +1,179 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ddd;
+  background-image: url(../img/alum.png);
+}
+#main {
+  width: 1231px;
+  margin: 0 auto;
+  position: relative;
+}
+#keyboard {
+  width: 1215px;
+  height: 540px;
+  padding: 75px 0 0 16px;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: 0 -220px;
+  list-style-type: none;
+  z-index: 5;
+  position: relative;
+}
+@font-face {
+  font-family: keyboard;
+  src: url('../fonts/keyboard.otf') format('opentype');
+}
+li,
+.key {
+  width: 47px;
+  height: 69px;
+  border-radius: 8px;
+  padding: 0 12px;
+  line-height: 69px;
+  float: left;
+  position: relative;
+  margin: 0 12px 12px 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-family: keyboard, "Arial Rounded", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+li:active,
+.key:active {
+  top: 2px;
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+}
+ol li span {
+  display: block;
+  height: 14px;
+  line-height: 42px;
+}
+.special {
+  height: 53px;
+  padding-top: 16px;
+  font-size: 16px;
+}
+.special span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0 12px;
+  height: auto;
+  line-height: 36px;
+  font-size: 13px;
+}
+.special.tall {
+  height: 51px;
+  padding-top: 28px;
+}
+.r {
+  text-align: right;
+}
+.l {
+  text-align: left;
+}
+#delete {
+  width: 96px;
+}
+#tab {
+  width: 96px;
+}
+#caps-lock {
+  width: 114px;
+}
+#enter {
+  width: 112px;
+}
+.shift {
+  width: 154px;
+}
+.shift.r {
+  width: 155px;
+}
+.command {
+  width: 71px;
+}
+.command span {
+  font-size: 24px;
+  line-height: 44px;
+}
+#space {
+  width: 379px;
+}
+.arrow {
+  height: 38px;
+  line-height: 38px;
+  margin: 0 12px 3px 0;
+  font-size: 20px;
+}
+.up {
+  margin: 0 83px 3px;
+  border-radius: 8px 8px 0 0;
+}
+.down {
+  border-radius: 0 0 8px 8px;
+}
+
+
+#header-wrap{
+  position:relative;
+  top:30px;
+  height:100px;
+  margin-left: 170px;
+  width: 1200px;
+  background-color:#000;
+}
+#search{
+   width:560px;
+   height:28px;
+   float:right; 
+   padding-top:30px; 
+  }
+#q{
+  width:172px; 
+  height:18px;
+  padding:5px 5px 5px 25px;
+  font-size:14px; 
+  border: medium none;
+  line-height:18px; 
+  background:#777;
+}
+.button{ 
+  height:28px; 
+  font-size:12px; 
+  width:60px; 
+  line-height:28px; 
+  text-align:center;
+  border: medium none; 
+  cursor:pointer; 
+  color:#FFF;
+}
+#search input { 
+  color:#eee;
+  vertical-align: middle; 
+  border-radius:3px;
+  margin-right:3px;
+  background-color:#555;
+}
+
+.macbook-pro img {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px #333 inset;
+}
+img {
+    border: 0;
+    display: block;
+}
