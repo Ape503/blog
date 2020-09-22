@@ -100,7 +100,7 @@ h6 {
 
 .banner {
     height: 515px;
-    background-image: url(.img\4.jpg);
+    background-image: url(../resume/rs-cover.jpg);
     background-position: center center;
     background-size: cover;
 }
