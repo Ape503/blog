@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <div class="topNavBar">
+  <div id="topNavBar"class="topNavBar">
     <div class="topNavBar-inner clearfix">
       <a class="logo" href="#" alt="logo" style="float: left;">
         <span class="rs">RS</span>
@@ -32,10 +32,20 @@
             <a href="#">技能</a>
           </li>
           <li>
-            <a href="#">作品</a>
+            <a class="menuTigger" href="#">作品</a>
+            <ul class="submenu">
+              <li>作 品 1</li>
+              <li>作 品 2</li>
+              <li>作 品 3</li>
+            </ul>
           </li>
           <li>
-            <a href="#">博客</a>
+            <a class="menuTigger" href="#">博客</a>
+            <ul class="submenu">
+              <li>博 客 1</li>
+              <li>博 客 2</li>
+              <li>博 客 3</li>
+            </ul>
           </li>
           <li>
             <a href="#">日历</a>
@@ -57,7 +67,7 @@
     <div class="userCard">
       <div class="pictureAndText clearfix">
         <div class="picture">
-          <img src="../IMG/Resume/avatar.jpg" width=299 height=347 alt="头像">
+          <img src="../resume/avatar.jpg" width=299 height=347 alt="头像">
         </div>
         <div class="text">
           <span class="welcome">Hello
@@ -187,17 +197,47 @@
 
     <div class="works" style="height: 597px;">
       <div class="big" style="top: 0; left: 0;">
-        <img src="../IMG/Resume/1.jpg" alt="作品1">
+        <img src="../resume/1.jpg" alt="作品1">
       </div>
       <div class="small" style="top: 0; left: 645px;">
-        <img src="../IMG/Resume/2.jpg" alt="作品2">
+        <img src="../resume/2.jpg" alt="作品2">
       </div>
       <div class="small" style="top: 312px; left: 645px;">
-        <img src="../IMG/Resume/3.jpg" alt="作品3">
+        <img src="../resume/3.jpg" alt="作品3">
       </div>
     </div>
-
   </section>
-</body>
+  <script>
+    window.onscroll=function(){
+      if(window.scrollY>0){
+        topNavBar.classList.add('sticky')
+      }else{
+        topNavBar.classList.remove('sticky')
+      }
+    }
 
+      let aTags=document.getElementsByClassName('menuTigger');
+      for(let i=0;i<aTags.length;i++){
+        aTags[i].onmouseenter=function(x){
+          let a=x.currentTarget
+          let brother=a.nextSibling;  // target：表示操作元素 currentTarget：表示监听元素 一般都不太一样  中间会有其他元素或者空格、回车
+          // while(brother.nodeType === 3){  //循环---取最后一个不是文本的节点
+            while(brother.tagName !== 'UL'){  //tagName返回大写
+              brother=brother.nextSibling     //循环寻找兄弟节点有没有ul标签
+          }
+         brother.classList.add('active');
+        }
+        aTags[i].onmouseleave=function(x){
+          let a=x.currentTarget
+          let brother=a.nextSibling;  // target：表示操作元素 currentTarget：表示监听元素 一般都不太一样  中间会有其他元素或者空格、回车
+          // while(brother.nodeType === 3){  //循环---取最后一个不是文本的节点
+            while(brother.tagName !== 'UL'){  //tagName返回大写
+              brother=brother.nextSibling     //循环寻找兄弟节点有没有ul标签
+          }
+         brother.classList.remove('active');
+      }
+    }
+
+  </script>
+</body>
 </html>
