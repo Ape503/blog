@@ -98,14 +98,38 @@ h1,h2,h3,h4,h5,h6{
 .topNavBar .submenu{  
   display: none;
   position: absolute;  /*解决办法绝对定位*/
-  left: 0;
+  right: 0;
   top:100%;          /*定位方式不一样引起会自动换行？*/
+  background: white;
+  color: #3d4451;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
-.topNavBar .submenu .active{
+/*.topNavBar .submenu.active{ //原来的样式
   display: block;
+}*/
+.topNavBar li.active>.submenu{
+  display: block;
+  animation: submenuSlide 0.3s;
+}
+/*@keyframes submenuSlide {
+  0%{
+    transform: translateX(-100%);  不能获取位移宽度？
+  }
+  100%{
+    transform: translateX(0);
+  }
+}*/
+@keyframes submenuSlide {
+  0%{
+    margin-right: 100%; /* 解决办法:margin-right：获取位移父亲的宽度百分之百*/
+  }                     
+  100%{
+    margin-right: 0%;
+  }
 }
 .topNavBar .submenu>li{  /*解决自动换行*/
   white-space: nowrap;
+  padding: 5px 10px;
 }
 
 .topNavBar .logo {
