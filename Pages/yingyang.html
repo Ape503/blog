@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Bin</title>
+</head>
+<style>
+	body{
+		background: #444;
+	}
+	@keyframes slidein{
+		from{
+			transform:rotate(0deg);
+		}
+		to{
+			transform: rotate(360deg);
+		}
+	}
+	#yinyang {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgb(0,0,0);
+	background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 51%);
+	position: relative;
+	animation-duration: 3s;
+	animation-name: slidein;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+    }
+   #yinyang::before{
+     	content: '';
+    	width: 20px;
+    	height: 20px;
+    	border-radius: 50%;
+    	background: #fff;
+    	position: absolute;
+    	left: 0px;
+    	top:50px;
+    	border: 40px solid black;
+    }
+     #yinyang>::after{
+     	content: '';
+    	width: 20px;
+    	height: 20px;
+    	border-radius: 50%;
+    	background: #000;
+    	position: absolute;
+    	right: 0px;
+    	top:50px;
+    	border: 40px solid #fff;
+    }
+</style>
+<body>
+	<div id="yinyang">
+		<div class="one">
+		</div>
+		<div class="two">
+		</div>
+	</div>
+	<p>
+		道生一、一生二、二生三、三生万物
+	</p>
+</body>
+</html>
