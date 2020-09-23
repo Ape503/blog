@@ -26,13 +26,13 @@
       <nav style="float: right;">
         <ul class="clearfix">
           <li>
-            <a href="#">关于</a>
+            <a>关于</a>    <!--  用锚点来跳转有bug？ -->
           </li>
           <li>
-            <a href="#">技能</a>
+            <a>技能</a>
           </li>
           <li class="menuTigger active">
-            <a href="#">作品</a>    <!-- 应该把触发器放在父元素上 -->
+            <a>作品</a>    <!-- 应该把触发器放在父元素上 -->
             <ul class="submenu">
               <li>作 品 1</li>
               <li>作 品 2</li>
@@ -170,7 +170,7 @@
       </li>
     </ol>
   </section>
-  <section class="portfolio">
+  <section class="portfolio" id="siteWorks">
     <h2>作品集</h2>
     <nav>
       <ol class="clearfix">
@@ -243,7 +243,19 @@
         }
       }
     }
-
+          // 解决办法：除锚点的滚动外---------滚动到指定元素
+        let aTags=document.querySelectorAll('nav.menu > ul > li > a')
+        for(let i=0;i<aTags.length;i++){
+          aTags[i].onclick=function(x){
+           x.preventDefault()  //阻止a标签默认动作:跳转或锚点
+           let a=x.currentTarget
+           let href= a.getAttribute('href')  //元素.getAttribute操作什么就是什么
+                                            //元素.href  浏览器处理过
+            let element=document..querySelector(href)
+            let top =element.offsetTop;
+            window.scrollTo(0,top-80);
+          }                                 
+        }
   </script>
 </body>
 </html>
