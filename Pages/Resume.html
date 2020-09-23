@@ -31,16 +31,16 @@
           <li>
             <a href="#">技能</a>
           </li>
-          <li>
-            <a class="menuTigger" href="#">作品</a>
+          <li class="menuTigger active">
+            <a href="#">作品</a>    <!-- 应该把触发器放在父元素上 -->
             <ul class="submenu">
               <li>作 品 1</li>
               <li>作 品 2</li>
               <li>作 品 3</li>
             </ul>
           </li>
-          <li>
-            <a class="menuTigger" href="#">博客</a>
+          <li class="menuTigger active">
+            <a href="#">博客</a>
             <ul class="submenu">
               <li>博 客 1</li>
               <li>博 客 2</li>
@@ -216,25 +216,31 @@
       }
     }
 
-      let aTags=document.getElementsByClassName('menuTigger');
-      for(let i=0;i<aTags.length;i++){
-        aTags[i].onmouseenter=function(x){
-          let a=x.currentTarget
-          let brother=a.nextSibling;  // target：表示操作元素 currentTarget：表示监听元素 一般都不太一样  中间会有其他元素或者空格、回车
-          // while(brother.nodeType === 3){  //循环---取最后一个不是文本的节点
-            while(brother.tagName !== 'UL'){  //tagName返回大写
-              brother=brother.nextSibling     //循环寻找兄弟节点有没有ul标签
-          }
-         brother.classList.add('active');
+      let liTags=document.getElementsByClassName('menuTigger');
+      for(let i=0;i<liTags.length;i++){
+        liTags[i].onmouseenter=function(x){
+           x.currentTarget.classList.add('active')
+        //   let li=x.currentTarget
+        //   let brother=li.getElementsByClassName('ul')[0] 
+        //     // target：表示操作元素 currentTarget：表示监听元素 一般都不太一样  中间会有其他元素或者空格、回车
+        //   // // while(brother.nodeType === 3){  //循环---取最后一个不是文本的节点
+        //   //   while(brother.tagName !== 'UL'){  //tagName返回大写
+        //   //     brother=brother.nextSibling     //循环寻找兄弟节点有没有ul标签
+        //   // }
+        //  brother.classList.add('active');
+        // }
+        // liTags[i].onmouseleave=function(x){
+        //   let li=x.currentTarget
+        //   let brother=li.getElementsByClassName('ul')[0] 
+        //   // let brother=a.nextSibling;  
+        //   //   while(brother.tagName !== 'UL'){  
+        //   //     brother=brother.nextSibling 
+        //   // }
+        //  brother.classList.remove('active');
+
+        liTags[i].onmouseleave=function(x){
+          x.currentTarget.classList.remove('active')
         }
-        aTags[i].onmouseleave=function(x){
-          let a=x.currentTarget
-          let brother=a.nextSibling;  // target：表示操作元素 currentTarget：表示监听元素 一般都不太一样  中间会有其他元素或者空格、回车
-          // while(brother.nodeType === 3){  //循环---取最后一个不是文本的节点
-            while(brother.tagName !== 'UL'){  //tagName返回大写
-              brother=brother.nextSibling     //循环寻找兄弟节点有没有ul标签
-          }
-         brother.classList.remove('active');
       }
     }
 
