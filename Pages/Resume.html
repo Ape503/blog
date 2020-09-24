@@ -26,13 +26,13 @@
       <nav style="float: right;">
         <ul class="clearfix">
           <li>
-            <a>关于</a>    <!--  用锚点来跳转有bug？ -->
+            <a href="#siteAbout">关于</a>    <!--  用锚点来跳转有bug？ -->
           </li>
           <li>
-            <a>技能</a>
+            <a href="#siteSkills">技能</a>
           </li>
           <li class="menuTigger active">
-            <a>作品</a>    <!-- 应该把触发器放在父元素上 -->
+            <a href="#siteWorks">作品</a>    <!-- 应该把触发器放在父元素上 -->
             <ul class="submenu">
               <li>作 品 1</li>
               <li>作 品 2</li>
@@ -64,7 +64,7 @@
     <div class="mask"></div>
   </div>
   <main style="">
-    <div class="userCard">
+    <div id="siteAbout" class="userCard">
       <div class="pictureAndText clearfix">
         <div class="picture">
           <img src="../IMG/Resume/avatar.jpg" width=299 height=347 alt="头像">
@@ -117,7 +117,7 @@
     </p>
 
   </main>
-  <section class="skills">
+  <section id="siteSkills"class="skills">
     <h2>技能</h2>
     <ol class="clearfix">
       <li>
@@ -243,7 +243,7 @@
         }
       }
     }
-          // 解决办法：除锚点的滚动外---------滚动到指定元素
+          // 解决办法：除锚点的滚动外--还需滚动到指定元素
         let aTags=document.querySelectorAll('nav.menu > ul > li > a')
         for(let i=0;i<aTags.length;i++){
           aTags[i].onclick=function(x){
