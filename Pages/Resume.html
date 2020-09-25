@@ -248,12 +248,28 @@
         for(let i=0;i<aTags.length;i++){
           aTags[i].onclick=function(x){
            x.preventDefault()  //阻止a标签默认动作:跳转或锚点
-           let a=x.currentTarget
+           let a=x.currentTarget  //currentTarget：表示监听元素
            let href= a.getAttribute('href')  //元素.getAttribute操作什么就是什么
                                             //元素.href  浏览器处理过
             let element=document..querySelector(href)
             let top =element.offsetTop;
-            window.scrollTo(0,top-80);
+
+            let n = 25;  //一共滚动多少次
+            let duration = 500 /n; //多少时间滚动一次
+            let currentTop =  window.scrollY
+            let targetTop = top-80;
+            let distance = (targetTop - currentTop)/n
+            let i = 0;
+            let id = setInterval( ()=>{
+              if(i === n){
+                window.clearInterval(id);      //关闭计时器（动画）
+                return;
+              }
+              i = i + 1;
+               window.scrollTo(0,currentTop + distance * i);
+            },duration);
+            // window.scrollTo(0,top-80);
+
           }                                 
         }
   </script>
