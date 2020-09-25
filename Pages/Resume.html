@@ -117,7 +117,7 @@
     </p>
 
   </main>
-  <section id="siteSkills"class="skills">
+  <section id="siteSkills" class="skills">
     <h2>技能</h2>
     <ol class="clearfix">
       <li>
@@ -216,7 +216,7 @@
       }
     }
 
-      let liTags=document.getElementsByClassName('menuTigger');
+       let liTags=document.querySelectorAll('nav.menu > ul > li')
       for(let i=0;i<liTags.length;i++){
         liTags[i].onmouseenter=function(x){
            x.currentTarget.classList.add('active')
@@ -245,7 +245,7 @@
     }
           // 解决办法：除锚点的滚动外--还需滚动到指定元素
         let aTags=document.querySelectorAll('nav.menu > ul > li > a')
-        for(let i=0;i<aTags.length;i++){
+        for(let i=0; i<aTags.length; i++){
           aTags[i].onclick=function(x){
            x.preventDefault()  //阻止a标签默认动作:跳转或锚点
            let a=x.currentTarget  //currentTarget：表示监听元素
@@ -253,6 +253,8 @@
                                             //元素.href  浏览器处理过
             let element=document.querySelector(href)
             let top =element.offsetTop;
+              window.scrollTo(0, top - 80);
+
 
             let n = 25;  //一共滚动多少次
             let duration = 500 / n; //多少时间滚动一次
@@ -272,7 +274,6 @@
               i = i + 1;
                window.scrollTo(0,currentTop + distance * i);
             },duration);
-            // window.scrollTo(0,top-80);
 
           }                                 
         }
