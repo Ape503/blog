@@ -19,6 +19,12 @@
     git config --global push.default matching-----当git push但未指定任何分支时将自动匹配本地所有分支到远端仓库
     git config --global core.quotepath false -----显示status编码
     git config --global core.editor "vim"    -----设置编辑器为Vim
+    ![仓库配置](https://github.com/Ape503/blog/blob/master/IMG/Git/2.jpg)
+    ![密钥创建](https://github.com/Ape503/blog/blob/master/IMG/Git/3.jpg)
+    ![密钥创建](https://github.com/Ape503/blog/blob/master/IMG/Git/4.jpg)
+    ![密钥创建](https://github.com/Ape503/blog/blob/master/IMG/Git/5.jpg)
+    ![密钥创建](https://github.com/Ape503/blog/blob/master/IMG/Git/6.jpg)
+    ![密钥创建](https://github.com/Ape503/blog/blob/master/IMG/Git/7.jpg)
 # Git使用
     本地使用   
     将本地仓库上传到 GitHub
