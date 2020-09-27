@@ -15,7 +15,7 @@
   思想：分治、动态规划、贪心
 
   计数排序：无法统计负数与小数、需要用到哈希
-  ![计数排序](https://github.com/Ape503/blog/blob/master/Algorithm/1.png)
+  ![计数排序](https://github.com/Ape503/blog/blob/master/IMG/Algorithm/1.png)
   桶排序：出桶需要重新排序
   基数排序：桶的个数固定
 
