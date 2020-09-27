@@ -26,4 +26,4 @@
 ## git命令 
     git init---本地仓库初始化  git status -sb---查看文件状态 git add xxx---将当前文件加入暂存区  git commit xxx -m 'xxx'---将add过的文件提交到本地仓库
     git log---日志变动  git clone git@github.com:xxxx---下载远端仓库到本地
-    [avatar](/home/picture/1.png)
+    [avatar](/IMG/Git/1.jpg)
